@@ -3,4 +3,4 @@
 source "https://rubygems.org"
 
 gem "rake"
-gem "puma", "> 0"
+gem "puma", "~> 5.1.0"

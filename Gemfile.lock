@@ -10,7 +10,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  puma (> 0)
+  puma (~> 5.1.0)
   rake
 
 BUNDLED WITH
