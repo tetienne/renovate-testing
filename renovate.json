@@ -1,7 +1,30 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    "schedule:weekends",
+    ":semanticCommitTypeAll(chore)"
   ],
-  "rangeStrategy": "update-lockfile"
+  "branchPrefix": "renovate-",
+  "onboardingBranch": "renovate-configure",
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "extends": [
+        "packages:eslint"
+      ],
+      "groupName": "eslint"
+    },
+    {
+      "matchManagers": [
+        "bundler"
+      ],
+      "rangeStrategy": "update-lockfile"
+    }
+  ],
+  "circleci": {
+    "fileMatch": [
+      "(^|/).circleci/config.yml$",
+      "(^|/).circleci/config/@root.yml$"
+    ]
+  }
 }
