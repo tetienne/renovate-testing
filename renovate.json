@@ -19,7 +19,8 @@
       "matchManagers": [
         "bundler"
       ],
-      "rangeStrategy": "update-lockfile"
+      "rangeStrategy": "update-lockfile",
+      "prConcurrentLimit": 20
     }
   ],
   "circleci": {
