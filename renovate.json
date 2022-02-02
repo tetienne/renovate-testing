@@ -4,6 +4,7 @@
     "schedule:weekends",
     ":semanticCommitTypeAll(chore)"
   ],
+  "includeForks": true,
   "branchPrefix": "renovate-",
   "onboardingBranch": "renovate-configure",
   "rangeStrategy": "bump",
